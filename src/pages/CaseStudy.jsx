@@ -67,6 +67,14 @@ export default function CaseStudy() {
               <dt>Stack</dt>
               <dd>{project.stack.join(' · ')}</dd>
             </div>
+            {project.repo && (
+              <div>
+                <dt>Code</dt>
+                <dd>
+                  <MaybeLink href={project.repo}>Source on GitHub</MaybeLink>
+                </dd>
+              </div>
+            )}
             {project.liveUrl && (
               <div>
                 <dt>Live</dt>

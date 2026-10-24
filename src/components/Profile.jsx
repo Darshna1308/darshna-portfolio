@@ -43,7 +43,7 @@ export default function Profile() {
           </h2>
 
           {site.profile.map((para, i) => (
-            <p key={i} className={i === 0 ? styles.first : undefined} data-reveal="">
+            <p key={i} className={i === 0 && typeof para === 'string' ? styles.first : undefined} data-reveal="">
               <ProfileParagraph value={para} />
             </p>
           ))}

@@ -1,5 +1,5 @@
 import { labNotes } from '../data/projects.js'
-import Field from './Field.jsx'
+import Field, { MaybeLink } from './Field.jsx'
 import MarginNote, { StatusNote } from './MarginNote.jsx'
 import styles from './LabNotes.module.css'
 
@@ -29,6 +29,13 @@ export default function LabNotes() {
               <span className={styles.existsLabel}>What exists today</span>
               <Field value={note.exists} />
             </p>
+            {note.repo && (
+              <p className={styles.repo}>
+                <MaybeLink href={note.repo}>
+                  Source on GitHub<span className="visually-hidden">: {note.title}</span>
+                </MaybeLink>
+              </p>
+            )}
           </li>
         ))}
       </ol>

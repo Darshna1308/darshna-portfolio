@@ -44,7 +44,7 @@ export default function Feature({ project }) {
           </ul>
 
           <div className={styles.lists}>
-            <FeatureList title="Working now" items={project.working} />
+            <FeatureList title="Implemented" items={project.working} />
             {project.planned.length > 0 && <FeatureList title="Planned" items={project.planned} />}
           </div>
 
@@ -55,6 +55,11 @@ export default function Feature({ project }) {
               </Link>
             )}
             {project.liveUrl && <MaybeLink href={project.liveUrl}>Visit the live site</MaybeLink>}
+            {project.repo && (
+              <MaybeLink href={project.repo}>
+                Source on GitHub<span className="visually-hidden">: {title}</span>
+              </MaybeLink>
+            )}
           </p>
         </div>
 

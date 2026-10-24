@@ -11,26 +11,25 @@ export const site = {
     degree: 'B.E. Computer Science',
     school: 'Chandigarh University',
     years: '2024–2028',
-    // Latest CGPA Darshna stated. Set `show: false` to hide it; `confirmed` flags it in check:content.
-    cgpa: { value: '7.92 / 10', show: true, confirmed: false },
+    // Hidden at Darshna's request. Set `show: true` to display it.
+    cgpa: { value: '7.92 / 10', show: false },
   },
 
   links: {
     github: 'https://github.com/Darshna1308',
-    linkedin: ph('LinkedIn profile URL'),
-    upwork: ph('Upwork profile URL'),
-    email: ph('Public contact email'),
+    linkedin: 'https://www.linkedin.com/in/darshnapariharcu/',
+    upwork: 'https://www.upwork.com/freelancers/~011981b0cd67d5e516',
+    email: 'darshnaparihar1308@gmail.com',
+    // Save the PDF as public/Darshna-Parihar-Resume.pdf, then set this to '/Darshna-Parihar-Resume.pdf'.
     resume: ph('Résumé PDF'),
   },
 
-  portrait: ph('Real portrait of Darshna, vertical 4:5, at least 1200 × 1500px'),
+  // Replace with { src: '/images/portrait.webp', alt, width: 1200, height: 1500, credit }.
+  // See docs/CONTENT-NEEDED.md for the exact file requirements.
+  portrait: ph('Real portrait of Darshna: public/images/portrait.webp, 4:5, 1200 × 1500px'),
 
-  // First-person profile essay. Paragraphs marked as placeholders still need Darshna's own words.
-  profile: [
-    "I'm a computer science student at Chandigarh University who learns by building. Most of what I know about software I've learned by shipping something, finding where it breaks, and fixing it.",
-    'My work so far spans responsive front ends, full-stack apps with authentication and databases, AI-integrated services and data-oriented experiments. Some are live, some are prototypes, and I label which is which.',
-    ph('A paragraph in Darshna’s own words: what drives her, and what she wants to work on next'),
-  ],
+  // Darshna's own About introduction. Not written yet: never fill this in on her behalf.
+  profile: [ph('Your About introduction, in your own words (2–3 short paragraphs)')],
 }
 
 export const community = [
@@ -42,30 +41,27 @@ export const community = [
   },
   {
     org: 'NEXUS DELTA',
-    role: 'Hackathon team member',
-    context: 'Team reached Round 2',
-    detail: ph('Hackathon name, date and Darshna’s part in the build'),
+    role: 'Team DSA member',
+    context: 'Build For Bharat 2.0 · team reached Round 2',
+    detail: ph('Your part in the team build, and the hackathon date'),
   },
 ]
 
-// Drafted from Darshna's real stack; `confirmed: false` until she approves the wording.
+// Approved by Darshna on 24 Oct 2026. No prices, timelines or guarantees.
 export const services = [
   {
     title: 'Websites for small businesses',
     body: 'A responsive website that presents what your business offers and gives visitors a clear way to contact you, such as a WhatsApp enquiry link.',
     proof: 'Example: Nidhi Builders',
-    confirmed: false,
   },
   {
     title: 'React front ends',
     body: 'Turning a design or a rough idea into React components that work on phones and desktops.',
     proof: 'React, Vite, CSS',
-    confirmed: false,
   },
   {
     title: 'Small full-stack MVPs',
     body: 'A small first version of an app with sign-up, login and a database, to try out an idea.',
     proof: 'Express, MongoDB, JWT auth',
-    confirmed: false,
   },
 ]
