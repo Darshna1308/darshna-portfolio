@@ -1,0 +1,85 @@
+.diagram {
+  margin: 0;
+  padding: 1.25rem 0 0;
+  border-top: 1px solid var(--rule);
+}
+
+.title {
+  margin: 0 0 1rem;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+}
+
+.chain {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 0.75rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+}
+
+.node {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.6rem 0.85rem;
+  border: 1.5px solid var(--ink);
+  background: var(--paper);
+  transform: rotate(var(--tilt));
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+.label {
+  font-family: var(--font-display);
+  font-size: var(--step-0);
+  line-height: 1.1;
+}
+
+.sub {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+}
+
+.connector {
+  width: 2.75rem;
+  height: auto;
+  margin-inline: 0.35rem;
+  color: var(--cobalt);
+  flex: none;
+}
+
+.caption {
+  margin-top: 1rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--step--1);
+  color: var(--cobalt);
+}
+
+@media (max-width: 40rem) {
+  .chain {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .connector {
+    transform: rotate(90deg);
+    margin: 0.6rem 0 0.6rem 0.5rem;
+    width: 2.25rem;
+  }
+}

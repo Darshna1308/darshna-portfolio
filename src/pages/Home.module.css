@@ -1,0 +1,31 @@
+.workHead {
+  align-items: end;
+  row-gap: 1.5rem;
+  padding-top: calc(var(--space-section) * 0.4);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--ink);
+}
+
+.workTitle {
+  grid-column: 1 / span 8;
+  font-size: var(--step-5);
+  font-weight: 300;
+  line-height: 0.85;
+  letter-spacing: -0.05em;
+}
+
+.workTitle em {
+  color: var(--cobalt);
+}
+
+.workNote {
+  grid-column: 10 / span 3;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 56rem) {
+  .workTitle,
+  .workNote {
+    grid-column: 1 / -1;
+  }
+}

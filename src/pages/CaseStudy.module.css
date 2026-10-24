@@ -1,0 +1,160 @@
+.page {
+  padding-top: clamp(2rem, 5vw, 4rem);
+}
+
+.head {
+  row-gap: 1.25rem;
+  align-items: start;
+}
+
+.back,
+.folio {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.folio {
+  color: var(--cobalt);
+}
+
+.title {
+  grid-column: 1 / -1;
+  font-size: var(--step-5);
+  font-weight: 300;
+  line-height: 0.85;
+  letter-spacing: -0.05em;
+}
+
+.summary {
+  grid-column: 1 / span 7;
+  margin: 1rem 0 0;
+  font-family: var(--font-display);
+  font-size: var(--step-2);
+  line-height: 1.15;
+}
+
+.meta {
+  grid-column: 9 / span 4;
+  margin: 1rem 0 0;
+  display: grid;
+  gap: 1rem;
+  font-size: var(--step--1);
+}
+
+.meta dt {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  margin-bottom: 0.2rem;
+}
+
+.meta dd {
+  margin: 0;
+  font-size: var(--step-0);
+}
+
+.hero {
+  margin-top: clamp(2.5rem, 6vw, 5rem);
+  align-items: end;
+}
+
+.m_desktop {
+  grid-column: 1 / span 9;
+  grid-row: 1;
+}
+
+.m_mobile {
+  grid-column: 10 / span 3;
+  grid-row: 1;
+}
+
+.chapters {
+  padding-block: clamp(3rem, 8vw, 7rem);
+}
+
+.chapter {
+  row-gap: 1rem;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--ink);
+  align-items: start;
+}
+
+.chapterTitle {
+  grid-column: 1 / span 4;
+  display: flex;
+  gap: 0.6rem;
+  align-items: baseline;
+  font-size: var(--step-2);
+}
+
+.chapterNo {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  color: var(--cobalt);
+}
+
+.chapterBody {
+  grid-column: 5 / span 6;
+  display: grid;
+  gap: 1rem;
+}
+
+.chapterBody p {
+  margin: 0;
+}
+
+.chapterNote {
+  grid-column: 11 / span 2;
+}
+
+.next {
+  padding-bottom: var(--space-section);
+}
+
+.next a {
+  display: grid;
+  gap: 0.5rem;
+  padding-top: 1.25rem;
+  border-top: 3px solid var(--ink);
+  text-decoration: none;
+}
+
+.nextLabel {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+}
+
+.nextTitle {
+  font-family: var(--font-display);
+  font-size: var(--step-4);
+  font-style: italic;
+  line-height: 1;
+}
+
+@media (max-width: 56rem) {
+  .summary,
+  .meta,
+  .chapterTitle,
+  .chapterBody,
+  .chapterNote {
+    grid-column: 1 / -1;
+  }
+
+  .m_desktop {
+    grid-column: 1 / -1;
+  }
+
+  .m_mobile {
+    grid-column: 7 / -1;
+    grid-row: 2;
+    margin-top: -3rem;
+  }
+}

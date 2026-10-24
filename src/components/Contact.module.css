@@ -1,0 +1,116 @@
+.section {
+  padding-block: var(--space-section) 3rem;
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.section a:hover {
+  color: var(--lime);
+}
+
+.section :focus-visible {
+  outline-color: var(--lime);
+}
+
+.inner {
+  row-gap: 2.5rem;
+  align-items: start;
+}
+
+.heading {
+  grid-column: 1 / -1;
+  font-size: var(--step-5);
+  font-weight: 300;
+  line-height: 0.85;
+  letter-spacing: -0.05em;
+}
+
+.heading em {
+  color: var(--lime);
+}
+
+.lede {
+  grid-column: 1 / span 5;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--step-1);
+  line-height: 1.3;
+}
+
+.links {
+  grid-column: 7 / span 6;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.links li {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.9rem 0;
+  border-top: 1px solid rgba(243, 239, 230, 0.3);
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.75;
+}
+
+.link {
+  font-family: var(--font-display);
+  font-size: var(--step-1);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.colophon {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gutter);
+  margin-top: clamp(3rem, 8vw, 7rem);
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(243, 239, 230, 0.3);
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+}
+
+.colophonTitle {
+  grid-column: 1 / span 2;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.colophon p {
+  grid-column: 3 / span 6;
+  margin: 0 0 0.5rem;
+  opacity: 0.8;
+}
+
+.colophon .copy {
+  grid-column: 9 / span 4;
+  text-align: right;
+}
+
+@media (max-width: 56rem) {
+  .lede,
+  .links,
+  .colophonTitle,
+  .colophon p,
+  .colophon .copy {
+    grid-column: 1 / -1;
+    text-align: left;
+  }
+
+  .links li {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+}

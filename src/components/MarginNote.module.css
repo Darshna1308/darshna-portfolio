@@ -1,0 +1,72 @@
+.note {
+  position: relative;
+  margin: 0;
+  max-width: 17rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--step-0);
+  line-height: 1.3;
+  transform: rotate(-1.5deg);
+}
+
+.cobalt {
+  color: var(--cobalt);
+}
+
+.ink {
+  color: var(--ink);
+}
+
+.lime {
+  color: var(--lime);
+}
+
+.arrow {
+  width: 3.2rem;
+  height: auto;
+  margin-bottom: 0.25rem;
+}
+
+.status {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5em;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.statusLabel {
+  color: var(--ink-soft);
+}
+
+.statusValue {
+  padding: 0.1em 0.5em;
+  border: 1.5px solid var(--ink);
+}
+
+.s_live {
+  background: var(--lime);
+}
+
+.s_inProgress,
+.s_prototype,
+.s_hackathon {
+  border-style: dashed;
+}
+
+.s_concept {
+  border-style: dotted;
+}
+
+.confirm {
+  font-family: var(--font-display);
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 1.05em;
+  color: var(--cobalt);
+}
