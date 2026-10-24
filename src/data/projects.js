@@ -1,5 +1,16 @@
 import { ph } from './placeholder.js'
 
+// A real screenshot exported at 800 and 1600px wide in public/images/<name>-<width>.webp.
+const shot = (name, height1600, alt, caption) => ({
+  kind: 'desktop',
+  src: `/images/${name}-1600.webp`,
+  srcSet: `/images/${name}-800.webp 800w, /images/${name}-1600.webp 1600w`,
+  width: 1600,
+  height: height1600,
+  alt,
+  caption,
+})
+
 // Status vocabulary shown in the margin notes. Keep claims honest:
 // `statusConfirmed: false` renders a "to confirm" note until Darshna verifies it.
 // Feature lists describe what exists in each project's source code (checked 24 Oct 2026),
@@ -29,11 +40,16 @@ export const projects = [
       'WhatsApp chat links in a floating button and the contact section',
     ],
     planned: [],
-    role: 'Built independently',
+    role: 'Solo project',
     liveUrl: 'https://nidhi-builder-s.vercel.app/',
     repo: 'https://github.com/Darshna1308/Nidhi-Builder-s',
     media: [
-      { kind: 'desktop', alt: ph('Nidhi Builders homepage, desktop browser at 1440px, top of page (16:10)') },
+      shot(
+        'nidhi-home',
+        872,
+        'Nidhi Builders homepage hero: the headline “Building Tomorrow’s Landmarks” over a photo of a glass office building, with navigation and consultation buttons.',
+        'Live site, desktop homepage. The figures shown (projects, years, satisfaction) are the business’s own copy, not results of this project.',
+      ),
       { kind: 'mobile', alt: ph('Nidhi Builders projects section on a phone, 390px wide (9:19)') },
     ],
     layout: 'lead',
@@ -88,9 +104,16 @@ export const projects = [
       'Docker Compose setup for MongoDB, the AI service and the API',
     ],
     planned: [ph('Features still planned')],
-    role: 'Built independently',
+    role: 'Solo project',
     repo: 'https://github.com/Darshna1308/AgentOps',
-    media: [{ kind: 'desktop', alt: ph('AgentOps dashboard with a few logged runs and the analytics panel (16:10)') }],
+    media: [
+      shot(
+        'agentops-overview',
+        870,
+        'AgentOps dashboard overview: a six-stage run pipeline from prompt to result, above counters for total runs, success rate, failed runs, latency and tokens.',
+        'Dashboard overview from a local run. The counters reflect test runs, not production usage.',
+      ),
+    ],
     layout: 'right',
     architecture: {
       caption: 'Checked against the source code.',
@@ -120,9 +143,16 @@ export const projects = [
       'Audit log and deadline indicators',
     ],
     planned: [ph('Features still planned')],
-    role: 'Built independently',
+    role: 'Solo project',
     repo: 'https://github.com/Darshna1308/IntelliFlow',
-    media: [{ kind: 'desktop', alt: ph('IntelliFlow reviewer or admin dashboard after login, using demo data (16:10)') }],
+    media: [
+      shot(
+        'intelliflow-entrance',
+        869,
+        'IntelliFlow entrance screen styled as a library, with three books for choosing the User, Reviewer or Admin role.',
+        'Role-selection entrance. The request dashboards behind each role are not shown here.',
+      ),
+    ],
     layout: 'left',
     architecture: {
       caption: 'Checked against the source code.',
@@ -146,6 +176,12 @@ export const labNotes = [
       'A private memory vault: save a moment with its story, date, place, people, photos and a voice note, then browse a timeline or ask questions answered only from your own memories.',
     exists: 'Full-stack code: React and Three.js front end, Express and MongoDB back end, accounts, archive and search.',
     repo: 'https://github.com/Darshna1308/Echo',
+    media: shot(
+      'echo-login',
+      871,
+      'Echo login screen: a 3D carved jaali window casting patterned light on the left, and a “Welcome back” sign-in form on the right.',
+      'Welcome and sign-in screen.',
+    ),
   },
   {
     slug: 'agnipariksha',

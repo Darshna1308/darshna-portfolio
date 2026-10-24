@@ -15,46 +15,33 @@ Updated 24 Oct 2026. Every item below renders as a lime **Placeholder** stamp or
 
 ## A. Assets you must supply
 
-### Portrait (Profile section)
+### Already added (24 Oct 2026)
 
-- **Path:** `public/images/portrait.webp`
-- **Format:** WebP, sRGB, quality about 80, ideally under 300 KB. JPEG (`portrait.jpg`) is fine if you can't export WebP.
-- **Dimensions:** exactly **1200 × 1500 px** (4:5 portrait). Crop from a larger original, not upscaled. Leave some space around your head; the site does not crop it further.
-- **Privacy:** remove location (GPS) metadata before committing.
-- **Wiring:** in `src/data/site.js`, replace the `portrait` placeholder with:
+| File | Source | Used in |
+| --- | --- | --- |
+| `public/images/portrait-480.webp`, `portrait-960.webp` | Your photo (960 × 1280, resized and re-encoded only, no retouching or cropping) | Profile |
+| `public/images/nidhi-home-800.webp`, `-1600.webp` | Your Nidhi Builders homepage capture | Feature 01, case study |
+| `public/images/agentops-overview-800.webp`, `-1600.webp` | Your AgentOps dashboard capture | Feature 02 |
+| `public/images/intelliflow-entrance-800.webp`, `-1600.webp` | Your IntelliFlow entrance capture | Feature 03 |
+| `public/images/echo-login-800.webp`, `-1600.webp` | Your Echo sign-in capture | Lab notes |
 
-```js
-portrait: {
-  src: '/images/portrait.webp',
-  alt: 'Portrait of Darshna Parihar, <what is visible: setting, framing>',
-  width: 1200,
-  height: 1500,
-  credit: '<photographer name, or Self-portrait>',
-},
-```
+I matched each screenshot to its repository's source (for example, "Site Control" is in `AgentOps/frontend/src/App.jsx`). Captions say what each one shows and doesn't show.
 
-The alt text should say who it is and what is visible, in one sentence, without "image of". Width and height must be the file's real pixel size so the page doesn't jump while it loads.
+### Still needed
 
-### Project screenshots
+| Where | Exact capture | Size | How to add |
+| --- | --- | --- | --- |
+| Feature 01 and case study (phone frame) | Nidhi Builders **ongoing or signature projects section** on a phone (DevTools 390 × 844) | at least 780 px wide | Send it to me, or export `nidhi-projects-mobile-400.webp` and `-800.webp` into `public/images/` and replace the `ph(...)` mobile entry in `src/data/projects.js` |
+| Contact section | Résumé PDF | — | Save as `public/Darshna-Parihar-Resume.pdf` and set `site.links.resume` to `'/Darshna-Parihar-Resume.pdf'` |
 
-Capture the real product only. Don't use mockups, stock images or generated screens. Remove personal data (phone numbers, emails, customer names) unless it's the business's public contact. Save in `public/images/` and replace the `ph(...)` entry in `src/data/projects.js` with `{ kind, src, alt, width, height }`.
-
-| Where | Exact capture | Ratio | Export size | File name |
-| --- | --- | --- | --- | --- |
-| Feature 01 and case study | Nidhi Builders **homepage**, desktop browser 1440px wide, top of page, no browser UI | 16:10 | 1600 × 1000 | `nidhi-home-desktop.webp` |
-| Feature 01 and case study | Nidhi Builders **ongoing or signature projects section** on a phone (DevTools 390 × 844) | 9:19 | 780 × 1650 | `nidhi-projects-mobile.webp` |
-| Feature 02 | AgentOps **dashboard** with a few logged runs and the analytics panel | 16:10 | 1600 × 1000 | `agentops-dashboard.webp` |
-| Feature 03 | IntelliFlow **reviewer or admin dashboard** after login, using demo data | 16:10 | 1600 × 1000 | `intelliflow-dashboard.webp` |
-
-### Résumé
-
-Save it as `public/Darshna-Parihar-Resume.pdf` and set `site.links.resume` to `'/Darshna-Parihar-Resume.pdf'`.
+Optional, any time: an IntelliFlow dashboard screen behind login (the current image shows only the entrance), and a phone capture of any project.
 
 ## B. Facts you must confirm
 
 | Item | Where |
 | --- | --- |
 | Your About introduction, in your own words (2–3 short paragraphs) | `site.profile` |
+| NEXUS DELTA: you confirmed all projects are solo, but its README lists Team DSA with three members. Which is correct for the site? | `labNotes`, `community` |
 | NexaSoul: what you ran or organised, and when | `community[0].detail` |
 | NEXUS DELTA: your own part in the team build, and the hackathon date | `community[1].detail`, `labNotes` |
 | AGNIPARIKSHA: repository link (none found on your GitHub), dataset, model, what it can show | `labNotes` |

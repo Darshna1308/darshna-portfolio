@@ -253,3 +253,14 @@
     transform: none;
   }
 }
+
+/* Keep the screenshot caption clear of the overlapping phone frame. */
+.lead .m_desktop figcaption {
+  padding-right: 14%;
+}
+
+@media (max-width: 56rem) {
+  .lead .m_desktop figcaption {
+    padding-right: 52%;
+  }
+}

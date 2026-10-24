@@ -17,9 +17,7 @@
 
 .portrait img {
   width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  filter: grayscale(0.15) contrast(1.05);
+  height: auto;
 }
 
 .credit {

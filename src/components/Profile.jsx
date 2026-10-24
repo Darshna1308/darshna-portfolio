@@ -31,9 +31,20 @@ export default function Profile() {
           {isPlaceholder(portrait) ? (
             <PlaceholderMedia label={portrait.label} ratio="4 / 5" tone="ink" />
           ) : (
-            <img src={portrait.src} alt={portrait.alt} width={portrait.width} height={portrait.height} loading="lazy" />
+            <img
+              src={portrait.src}
+              srcSet={portrait.srcSet}
+              sizes="(min-width: 56rem) 40vw, 100vw"
+              alt={portrait.alt}
+              width={portrait.width}
+              height={portrait.height}
+              loading="lazy"
+              decoding="async"
+            />
           )}
-          <p className={styles.credit}>Portrait · {isPlaceholder(portrait) ? 'to be supplied' : portrait.credit}</p>
+          <p className={styles.credit}>
+            Portrait{isPlaceholder(portrait) ? ' · to be supplied' : portrait.credit ? ` · ${portrait.credit}` : ''}
+          </p>
         </div>
 
         <div className={styles.essay}>
@@ -61,12 +72,6 @@ export default function Profile() {
               <dt>Years</dt>
               <dd>{education.years}</dd>
             </div>
-            {education.cgpa.show && (
-              <div>
-                <dt>CGPA</dt>
-                <dd>{education.cgpa.value}</dd>
-              </div>
-            )}
           </dl>
 
           <MarginNote arrow className={styles.note}>

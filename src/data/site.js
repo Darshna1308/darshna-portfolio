@@ -11,8 +11,8 @@ export const site = {
     degree: 'B.E. Computer Science',
     school: 'Chandigarh University',
     years: '2024–2028',
-    // Hidden at Darshna's request. Set `show: true` to display it.
-    cgpa: { value: '7.92 / 10', show: false },
+    // CGPA intentionally omitted: Darshna asked for it to stay off the public site
+    // (a value kept here would still ship inside the JavaScript bundle).
   },
 
   links: {
@@ -24,9 +24,14 @@ export const site = {
     resume: ph('Résumé PDF'),
   },
 
-  // Replace with { src: '/images/portrait.webp', alt, width: 1200, height: 1500, credit }.
-  // See docs/CONTENT-NEEDED.md for the exact file requirements.
-  portrait: ph('Real portrait of Darshna: public/images/portrait.webp, 4:5, 1200 × 1500px'),
+  // Supplied by Darshna; resized and re-encoded only, never retouched.
+  portrait: {
+    src: '/images/portrait-960.webp',
+    srcSet: '/images/portrait-480.webp 480w, /images/portrait-960.webp 960w',
+    alt: 'Darshna Parihar smiling, wearing glasses and a white striped shirt, standing in a garden at sunset.',
+    width: 960,
+    height: 1280,
+  },
 
   // Darshna's own About introduction. Not written yet: never fill this in on her behalf.
   profile: [ph('Your About introduction, in your own words (2–3 short paragraphs)')],

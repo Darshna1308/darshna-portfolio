@@ -1,6 +1,7 @@
 import { labNotes } from '../data/projects.js'
 import Field, { MaybeLink } from './Field.jsx'
 import MarginNote, { StatusNote } from './MarginNote.jsx'
+import ProjectMedia from './ProjectMedia.jsx'
 import styles from './LabNotes.module.css'
 
 export default function LabNotes() {
@@ -25,6 +26,7 @@ export default function LabNotes() {
             <h3 className={styles.title}>{note.title}</h3>
             <StatusNote status={note.status} confirmed={note.statusConfirmed} />
             <p className={styles.summary}>{note.summary}</p>
+            {note.media && <ProjectMedia item={note.media} sizes="(min-width: 56rem) 30vw, 100vw" />}
             <p className={styles.exists}>
               <span className={styles.existsLabel}>What exists today</span>
               <Field value={note.exists} />
