@@ -1,3 +1,4 @@
+import { isHidden } from '../data/placeholder.js'
 import { community } from '../data/site.js'
 import Field from './Field.jsx'
 import styles from './Community.module.css'
@@ -17,9 +18,11 @@ export default function Community() {
             <h3 className={styles.org}>{entry.org}</h3>
             <p className={styles.role}>{entry.role}</p>
             <p className={styles.context}>{entry.context}</p>
-            <p className={styles.detail}>
-              <Field value={entry.detail} />
-            </p>
+            {!isHidden(entry.detail) && (
+              <p className={styles.detail}>
+                <Field value={entry.detail} />
+              </p>
+            )}
           </li>
         ))}
       </ul>

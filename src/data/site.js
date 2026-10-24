@@ -42,13 +42,13 @@ export const community = [
     org: 'NexaSoul',
     role: 'Operational Lead & Learning Coordinator',
     context: 'University frontend and full-stack development club',
-    detail: ph('What Darshna ran or organised at NexaSoul, and when'),
+    detail: ph('What Darshna ran or organised at NexaSoul, and when', { optional: true }),
   },
   {
     org: 'NEXUS DELTA',
     role: 'Team DSA member',
-    context: 'Build For Bharat 2.0 · team reached Round 2',
-    detail: ph('Your part in the team build, and the hackathon date'),
+    context: 'Build For Bharat 2.0 · 7–8 October 2026 · team reached Round 2',
+    detail: 'My part: researching similar concepts related to our idea, and working on the frontend.',
   },
 ]
 

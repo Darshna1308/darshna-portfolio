@@ -10,8 +10,8 @@ Updated 24 Oct 2026. Every item below renders as a lime **Placeholder** stamp or
 | Nidhi Builders features and stack | Source in `Darshna1308/Nidhi-Builder-s`: React 19, Vite, Framer Motion, responsive CSS, wa.me WhatsApp links, ongoing and signature project sections | The contact **form** has no submit handler, so the site does not claim it works. |
 | AgentOps features and stack | Source in `Darshna1308/AgentOps`: React dashboard, Express API with JWT and bcryptjs, FastAPI service calling Groq, MongoDB, Docker Compose, calculator and text-analyzer tools, rule-based scoring, feedback | Not run. "Implemented" means present in the code. |
 | IntelliFlow features and status | Source in `Darshna1308/IntelliFlow`: role dashboards, JWT and bcryptjs, Multer uploads, comments, assignments, audit log, deadline indicators. Its README says "Under Development". | Not run. Whether the database is Atlas comes from you; the code just reads `MONGO_URI`. |
-| Echo | Source in `Darshna1308/Echo`: React and Three.js front end, Express and MongoDB back end, accounts, archive and search | Now labelled "Prototype" (it has code, so it's no longer a "Concept"). Please confirm. |
-| NEXUS DELTA | `Darshna1308/nexus-delta-dsa` README: Team DSA (Anwesha Kar, Darshna Parihar, Saamyaraj Baidya), Build For Bharat 2.0, Streamlit and scikit-learn | Kept as **team** work, as you confirmed. "Round 2" comes from you. The commit history doesn't show who built which part, so your contribution isn't stated. |
+| Echo | Source in `Darshna1308/Echo`: React and Three.js front end, Express and MongoDB back end, accounts, memories with photos and voice notes, timeline, search and Ask Echo | Status "Prototype", as you confirmed. |
+| NEXUS DELTA | `Darshna1308/nexus-delta-dsa` README: Team DSA (Anwesha Kar, Darshna Parihar, Saamyaraj Baidya), Build For Bharat 2.0, Streamlit and scikit-learn | Kept as **team** work, credited to Team DSA. Event dates (7–8 October 2026), "Round 2" and your part (researching similar concepts, frontend work) come from you; nothing else is attributed to you. |
 
 ## A. Assets you must supply
 
@@ -24,46 +24,39 @@ Updated 24 Oct 2026. Every item below renders as a lime **Placeholder** stamp or
 | `public/images/agentops-overview-800.webp`, `-1600.webp` | Your AgentOps dashboard capture | Feature 02 |
 | `public/images/intelliflow-entrance-800.webp`, `-1600.webp` | Your IntelliFlow entrance capture | Feature 03 |
 | `public/images/echo-login-800.webp`, `-1600.webp` | Your Echo sign-in capture | Lab notes |
+| `public/images/nexus-delta-overview-800.webp`, `-1600.webp` | Your NEXUS DELTA overview capture (team app) | Lab notes |
 
 I matched each screenshot to its repository's source (for example, "Site Control" is in `AgentOps/frontend/src/App.jsx`). Captions say what each one shows and doesn't show.
 
 ### Still needed
 
-| Where | Exact capture | Size | How to add |
-| --- | --- | --- | --- |
-| Feature 01 and case study (phone frame) | Nidhi Builders **ongoing or signature projects section** on a phone (DevTools 390 × 844) | at least 780 px wide | Send it to me, or export `nidhi-projects-mobile-400.webp` and `-800.webp` into `public/images/` and replace the `ph(...)` mobile entry in `src/data/projects.js` |
-| Contact section | Résumé PDF | — | Save as `public/Darshna-Parihar-Resume.pdf` and set `site.links.resume` to `'/Darshna-Parihar-Resume.pdf'` |
-
-Optional, any time: an IntelliFlow dashboard screen behind login (the current image shows only the entrance), and a phone capture of any project.
+Only the résumé PDF (item 2 below). The Nidhi phone screenshot is optional (item 4).
 
 ## B. Remaining content: essential before launch
 
-These show as placeholders or "to confirm" on the public page and can't be left out without misleading or confusing visitors.
+These still show on the public page as a "Placeholder" stamp or "to confirm" note. `npm run check:content` fails until they're done.
 
 | # | Item | Where it shows | Where to edit |
 | --- | --- | --- | --- |
 | 1 | Your About introduction, in your own words (2–3 short paragraphs) | Profile | `site.profile` |
 | 2 | Résumé PDF | Contact | `public/Darshna-Parihar-Resume.pdf`, then `site.links.resume` |
 | 3 | Confirm AgentOps status: "In progress"? | Feature 02 | `projects.js` (`statusConfirmed`) |
-| 4 | Confirm Echo status: "Prototype"? | Lab notes | `labNotes` |
-| 5 | AGNIPARIKSHA: confirm "Prototype" and say what exists (repo link, data, model), or remove it from the site | Lab notes | `labNotes` |
-| 6 | NEXUS DELTA: your own contribution within Team DSA, and the hackathon date. The repo confirms the team and Build For Bharat 2.0 but not who built what. | Lab notes, Community | `labNotes`, `community[1]` |
 
 ## C. Remaining content: can be added later
 
-If these are still missing at launch, the right move is to hide the empty slot instead of showing a placeholder (a small code change, made only on request).
+These are hidden on the site until supplied (marked `{ optional: true }` in the data), so no empty placeholder shows. `npm run check:content` lists them without failing.
 
-| # | Item | Where it shows |
+| # | Item | Shows in |
 | --- | --- | --- |
-| 7 | Nidhi Builders phone screenshot (projects section, 390px wide) | Feature 01 and case study, phone frame |
-| 8 | Nidhi case study: the owner's situation before the site | Case study, Problem |
-| 9 | Nidhi case study: your design decisions and how you worked with the owner | Case study, Contribution |
-| 10 | Nidhi case study: one or two real challenges and how you solved them | Case study, Challenges |
-| 11 | Nidhi case study: any outcome the owner can confirm (no invented metrics) | Case study, Results |
-| 12 | Nidhi case study: what you'd improve next | Case study, What's next |
-| 13 | AgentOps: planned features | Feature 02 |
-| 14 | IntelliFlow: planned features | Feature 03 |
-| 15 | NexaSoul: what you ran or organised, and when | Community |
+| 4 | Nidhi Builders phone screenshot (projects section, 390px wide) | Feature 01 and case study, phone frame |
+| 5 | Nidhi case study: the owner's situation before the site | Case study, Problem |
+| 6 | Nidhi case study: your design decisions and how you worked with the owner | Case study, Contribution |
+| 7 | Nidhi case study: one or two real challenges and how you solved them | Case study, Challenges (section hidden) |
+| 8 | Nidhi case study: any outcome the owner can confirm (no invented metrics) | Case study, Results |
+| 9 | Nidhi case study: what you'd improve next | Case study, What's next (section hidden) |
+| 10 | AgentOps: planned features | Feature 02 (list hidden) |
+| 11 | IntelliFlow: planned features | Feature 03 (list hidden) |
+| 12 | NexaSoul: what you ran or organised, and when | Community |
 
 ## D. Optional improvements
 

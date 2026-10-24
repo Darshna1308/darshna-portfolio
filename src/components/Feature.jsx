@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-import { isPlaceholder } from '../data/placeholder.js'
+import { isPlaceholder, visible } from '../data/placeholder.js'
 import Diagram from './Diagram.jsx'
 import Field, { MaybeLink } from './Field.jsx'
 import MarginNote, { StatusNote } from './MarginNote.jsx'
@@ -28,7 +28,7 @@ export default function Feature({ project }) {
 
       <div className={`grid ${styles.body}`}>
         <div className={styles.media} data-reveal="">
-          {media.map((item, i) => (
+          {visible(media).map((item, i) => (
             <ProjectMedia key={i} item={item} className={styles[`m_${item.kind}`]} />
           ))}
         </div>
@@ -44,8 +44,8 @@ export default function Feature({ project }) {
           </ul>
 
           <div className={styles.lists}>
-            <FeatureList title="Implemented" items={project.working} />
-            {project.planned.length > 0 && <FeatureList title="Planned" items={project.planned} />}
+            <FeatureList title="Implemented" items={visible(project.working)} />
+            {visible(project.planned).length > 0 && <FeatureList title="Planned" items={visible(project.planned)} />}
           </div>
 
           <p className={styles.actions}>

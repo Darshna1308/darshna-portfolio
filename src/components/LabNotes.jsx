@@ -31,6 +31,16 @@ export default function LabNotes() {
               <span className={styles.existsLabel}>What exists today</span>
               <Field value={note.exists} />
             </p>
+            {note.credits && (
+              <dl className={styles.credits}>
+                {note.credits.map(([label, value]) => (
+                  <div key={label}>
+                    <dt>{label}</dt>
+                    <dd>{value}</dd>
+                  </div>
+                ))}
+              </dl>
+            )}
             {note.repo && (
               <p className={styles.repo}>
                 <MaybeLink href={note.repo}>

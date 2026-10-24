@@ -1,8 +1,9 @@
-import { isPlaceholder } from '../data/placeholder.js'
+import { isHidden, isPlaceholder } from '../data/placeholder.js'
 import { PlaceholderText } from './Placeholder.jsx'
 
 // Renders a content value, or a labelled placeholder when it is still missing.
 export default function Field({ value }) {
+  if (isHidden(value)) return null
   if (isPlaceholder(value)) return <PlaceholderText label={value.label} />
   return value
 }

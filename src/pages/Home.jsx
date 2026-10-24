@@ -33,8 +33,8 @@ export default function Home() {
               Selected <em>work</em>
             </h2>
             <MarginNote className={styles.workNote}>
-              Real projects, labelled as live, in progress or prototype. Screenshots marked &ldquo;placeholder&rdquo; are
-              stand-ins, not the product.
+              Real projects, labelled as live, in progress or prototype. Every screenshot is a capture of the project
+              itself.
             </MarginNote>
           </div>
           {projects.map((project) => (

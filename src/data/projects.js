@@ -50,7 +50,7 @@ export const projects = [
         'Nidhi Builders homepage hero: the headline “Building Tomorrow’s Landmarks” over a photo of a glass office building, with navigation and consultation buttons.',
         'Live site, desktop homepage. The figures shown (projects, years, satisfaction) are the business’s own copy, not results of this project.',
       ),
-      { kind: 'mobile', alt: ph('Nidhi Builders projects section on a phone, 390px wide (9:19)') },
+      { kind: 'mobile', alt: ph('Nidhi Builders projects section on a phone, 390px wide (9:19)', { optional: true }) },
     ],
     layout: 'lead',
     // A left-to-right chain; `link` is the arrow from the previous node (→ ← ↔).
@@ -66,23 +66,23 @@ export const projects = [
     caseStudy: {
       problem: [
         'A construction and property business needed a website to present its projects and receive enquiries.',
-        ph('The owner’s situation before the site, in Darshna’s words'),
+        ph('The owner’s situation before the site, in Darshna’s words', { optional: true }),
       ],
       contribution: [
         'I built the site independently with React and Vite and deployed it on Vercel.',
-        ph('Design decisions you made and how you worked with the owner'),
+        ph('Design decisions you made and how you worked with the owner', { optional: true }),
       ],
       implementation: [
         'React 19 with Vite, one folder per section component, plain CSS plus shared responsive styles.',
         'Framer Motion handles scroll-triggered entrance animations; icons come from Lucide.',
         'A floating WhatsApp button and a WhatsApp card in the contact section open a chat through a wa.me link.',
       ],
-      challenges: [ph('One or two real problems and how you solved them')],
+      challenges: [ph('One or two real problems and how you solved them', { optional: true })],
       results: [
         'The site is deployed and publicly reachable at nidhi-builder-s.vercel.app.',
-        ph('Any outcome the owner can confirm. No invented metrics.'),
+        ph('Any outcome the owner can confirm. No invented metrics.', { optional: true }),
       ],
-      next: [ph('What you would improve next')],
+      next: [ph('What you would improve next', { optional: true })],
     },
   },
   {
@@ -103,7 +103,7 @@ export const projects = [
       'Human feedback on each run',
       'Docker Compose setup for MongoDB, the AI service and the API',
     ],
-    planned: [ph('Features still planned')],
+    planned: [ph('Features still planned', { optional: true })],
     role: 'Solo project',
     repo: 'https://github.com/Darshna1308/AgentOps',
     media: [
@@ -142,7 +142,7 @@ export const projects = [
       'Reviewer assignment and comments',
       'Audit log and deadline indicators',
     ],
-    planned: [ph('Features still planned')],
+    planned: [ph('Features still planned', { optional: true })],
     role: 'Solo project',
     repo: 'https://github.com/Darshna1308/IntelliFlow',
     media: [
@@ -171,7 +171,7 @@ export const labNotes = [
     slug: 'echo',
     title: 'Echo',
     status: 'prototype',
-    statusConfirmed: false,
+    statusConfirmed: true,
     summary:
       'A private memory vault: save a moment with its story, date, place, people, photos and a voice note, then browse a timeline or ask questions answered only from your own memories.',
     exists: 'Full-stack code: React and Three.js front end, Express and MongoDB back end, accounts, archive and search.',
@@ -184,23 +184,26 @@ export const labNotes = [
     ),
   },
   {
-    slug: 'agnipariksha',
-    title: 'AGNIPARIKSHA',
-    status: 'prototype',
-    statusConfirmed: false,
-    summary:
-      'Lot-aware screening and predictive intelligence, combining anomaly detection with predictive modelling.',
-    exists: ph('Repository link, dataset, model and what the prototype can show'),
-  },
-  {
     slug: 'nexus-delta',
     title: 'NEXUS DELTA',
     status: 'hackathon',
     statusConfirmed: true,
     summary:
-      'An evidence-first capability decision engine built by Team DSA for Build For Bharat 2.0: a Streamlit app backed by scikit-learn models and analysis notebooks.',
-    exists: ph('Your own part in the team build (the repository lists three team members)'),
+      'An evidence-first capability decision engine for data-science teams: a Streamlit app that weighs internal evidence, job-market data and growth headroom, backed by scikit-learn models and analysis notebooks.',
+    exists: 'Team repository with the Streamlit app, analysis notebooks and model outputs.',
+    // Team credit and event per the repository README and Darshna; her own part as she confirmed it.
+    credits: [
+      ['Team', 'Team DSA: Anwesha Kar, Darshna Parihar, Saamyaraj Baidya'],
+      ['Event', 'Build For Bharat 2.0, 7–8 October 2026'],
+      ['My part', 'Researching similar concepts related to our idea, and working on the frontend'],
+    ],
     repo: 'https://github.com/Darshna1308/nexus-delta-dsa',
+    media: shot(
+      'nexus-delta-overview',
+      883,
+      'NEXUS DELTA overview page: the question “Which capability should your data science team develop next?” beside a 3D map of India with pillars for data-role postings per city, above summary counters.',
+      'Team DSA’s app, Overview page, signed in with a demo account. The figures come from the team’s dataset analysis.',
+    ),
   },
 ]
 

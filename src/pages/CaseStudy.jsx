@@ -6,6 +6,7 @@ import Diagram from '../components/Diagram.jsx'
 import Field, { MaybeLink } from '../components/Field.jsx'
 import MarginNote, { StatusNote } from '../components/MarginNote.jsx'
 import ProjectMedia from '../components/ProjectMedia.jsx'
+import { visible } from '../data/placeholder.js'
 import { findProject, projects } from '../data/projects.js'
 import { site } from '../data/site.js'
 import useReveal from '../hooks/useReveal.js'
@@ -87,20 +88,20 @@ export default function CaseStudy() {
         </header>
 
         <div className={`wrap grid ${styles.hero}`} data-reveal="">
-          {media.map((item, i) => (
+          {visible(media).map((item, i) => (
             <ProjectMedia key={i} item={item} className={styles[`m_${item.kind}`]} />
           ))}
         </div>
 
         <div className={`wrap ${styles.chapters}`}>
-          {SECTIONS.map(([key, heading], i) => (
+          {SECTIONS.filter(([key]) => visible(caseStudy[key]).length > 0).map(([key, heading], i) => (
             <section key={key} className={`grid ${styles.chapter}`} aria-labelledby={`cs-${key}`} data-reveal="">
               <h2 id={`cs-${key}`} className={styles.chapterTitle}>
                 <span className={styles.chapterNo}>0{i + 1}</span>
                 {heading}
               </h2>
               <div className={styles.chapterBody}>
-                {(caseStudy[key] || []).map((para, j) => (
+                {visible(caseStudy[key]).map((para, j) => (
                   <p key={j}>
                     <Field value={para} />
                   </p>
