@@ -21,7 +21,7 @@ export const site = {
     upwork: 'https://www.upwork.com/freelancers/~011981b0cd67d5e516',
     email: 'darshnaparihar1308@gmail.com',
     // Save the PDF as public/Darshna-Parihar-Resume.pdf, then set this to '/Darshna-Parihar-Resume.pdf'.
-    resume: ph('Résumé PDF'),
+    resume: '/Darshna-Parihar-Resume.pdf',
   },
 
   // Supplied by Darshna; resized and re-encoded only, never retouched.
@@ -34,7 +34,11 @@ export const site = {
   },
 
   // Darshna's own About introduction. Not written yet: never fill this in on her behalf.
-  profile: [ph('Your About introduction, in your own words (2–3 short paragraphs)')],
+  profile: [
+    'I’m Darshna Parihar, a Computer Science Engineering student who enjoys turning ideas into practical digital experiences. I work with React, JavaScript, and full-stack technologies to build responsive websites and explore how applications work beyond the interface.',
+    'I learn best by building, experimenting, and improving projects step by step. Alongside development, I’ve explored AI-based applications, participated in team projects, and contributed to technical communities through coordination and learning initiatives.',
+    'I’m currently looking for opportunities to contribute to real projects, strengthen my engineering skills, and work with people who enjoy solving meaningful problems.',
+  ],
 }
 
 export const community = [

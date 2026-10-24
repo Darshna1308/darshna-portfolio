@@ -66,6 +66,7 @@
   font-size: var(--step-1);
   text-decoration: none;
   border-bottom: 1px solid currentColor;
+  overflow-wrap: anywhere;
 }
 
 .colophon {

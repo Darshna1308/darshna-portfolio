@@ -52,6 +52,10 @@
   background: var(--lime);
 }
 
+.s_completed {
+  background: var(--paper);
+}
+
 .s_inProgress,
 .s_prototype,
 .s_hackathon {

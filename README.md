@@ -31,7 +31,7 @@ All words and links live in two files, not in the components:
 
 Anything still missing is written as `ph('what is needed')`. It renders with a lime **Placeholder** stamp so it can never pass as real work. Replace it with the real value (a string, or for images `{ kind, src, alt, width, height }`) and the stamp disappears.
 
-Each project has a `status` (`live`, `inProgress`, `prototype`, `hackathon`, `concept`) and `statusConfirmed`. Set `statusConfirmed: true` once you've checked it.
+Each project has a `status` (`live`, `completed`, `inProgress`, `prototype`, `hackathon`, `concept`) and `statusConfirmed`. Set `statusConfirmed: true` once you've checked it.
 
 Run `npm run check:content` before a production deploy. It exits with an error while placeholders remain.
 

@@ -32,15 +32,15 @@ I matched each screenshot to its repository's source (for example, "Site Control
 
 Only the résumé PDF (item 2 below). The Nidhi phone screenshot is optional (item 4).
 
-## B. Remaining content: essential before launch
+## B. Essential before launch: all done
 
-These still show on the public page as a "Placeholder" stamp or "to confirm" note. `npm run check:content` fails until they're done.
+`npm run check:content` now passes.
 
-| # | Item | Where it shows | Where to edit |
-| --- | --- | --- | --- |
-| 1 | Your About introduction, in your own words (2–3 short paragraphs) | Profile | `site.profile` |
-| 2 | Résumé PDF | Contact | `public/Darshna-Parihar-Resume.pdf`, then `site.links.resume` |
-| 3 | Confirm AgentOps status: "In progress"? | Feature 02 | `projects.js` (`statusConfirmed`) |
+| # | Item | Status |
+| --- | --- | --- |
+| 1 | About introduction | Your approved text is in `site.profile` |
+| 2 | Résumé PDF | Your PDF, unchanged, at `public/Darshna-Parihar-Resume.pdf`; `site.links.resume` is `/Darshna-Parihar-Resume.pdf` |
+| 3 | AgentOps status | Confirmed by you as finished; shown as "Completed" |
 
 ## C. Remaining content: can be added later
 
@@ -54,7 +54,6 @@ These are hidden on the site until supplied (marked `{ optional: true }` in the 
 | 7 | Nidhi case study: one or two real challenges and how you solved them | Case study, Challenges (section hidden) |
 | 8 | Nidhi case study: any outcome the owner can confirm (no invented metrics) | Case study, Results |
 | 9 | Nidhi case study: what you'd improve next | Case study, What's next (section hidden) |
-| 10 | AgentOps: planned features | Feature 02 (list hidden) |
 | 11 | IntelliFlow: planned features | Feature 03 (list hidden) |
 | 12 | NexaSoul: what you ran or organised, and when | Community |
 

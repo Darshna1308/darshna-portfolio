@@ -42,7 +42,7 @@ export default function Contact() {
           <h3 className={styles.colophonTitle}>Colophon</h3>
           <p>
             Set in Fraunces, Newsreader and IBM Plex Mono. Built with React and Vite, styled with plain CSS Modules. No 3D,
-            no tracking scripts. Placeholders are stamped until real material replaces them.
+            no tracking scripts.
           </p>
           <p className={styles.copy}>
             © {new Date().getFullYear()} {site.name} · Working Notes {site.issue}

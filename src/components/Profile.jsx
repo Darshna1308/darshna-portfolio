@@ -55,7 +55,15 @@ export default function Profile() {
 
           {site.profile.map((para, i) => (
             <p key={i} className={i === 0 && typeof para === 'string' ? styles.first : undefined} data-reveal="">
-              <ProfileParagraph value={para} />
+              {i === 0 && typeof para === 'string' ? (
+                <>
+                  {/* A span rather than ::first-letter, which would also enlarge a following apostrophe. */}
+                  <span className={styles.drop}>{para[0]}</span>
+                  <ProfileParagraph value={para.slice(1)} />
+                </>
+              ) : (
+                <ProfileParagraph value={para} />
+              )}
             </p>
           ))}
 

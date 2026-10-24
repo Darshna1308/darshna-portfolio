@@ -18,6 +18,7 @@ const shot = (name, height1600, alt, caption) => ({
 export const STATUS = {
   live: 'Live',
   inProgress: 'In progress',
+  completed: 'Completed',
   prototype: 'Prototype',
   hackathon: 'Hackathon prototype',
   concept: 'Concept',
@@ -90,8 +91,8 @@ export const projects = [
     number: '02',
     title: 'AgentOps',
     kicker: 'AI observability dashboard',
-    status: 'inProgress',
-    statusConfirmed: false,
+    status: 'completed',
+    statusConfirmed: true,
     summary:
       'A dashboard for monitoring AI-agent runs. An Express API routes each prompt through tools or a Python service that calls Groq, then logs the route, tools, latency, tokens and a quality score to MongoDB.',
     stack: ['React', 'Vite', 'Node.js', 'Express', 'Python', 'FastAPI', 'Groq', 'MongoDB', 'Docker'],
@@ -103,7 +104,7 @@ export const projects = [
       'Human feedback on each run',
       'Docker Compose setup for MongoDB, the AI service and the API',
     ],
-    planned: [ph('Features still planned', { optional: true })],
+    planned: [],
     role: 'Solo project',
     repo: 'https://github.com/Darshna1308/AgentOps',
     media: [

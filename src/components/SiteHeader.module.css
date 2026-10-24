@@ -71,7 +71,8 @@
   }
 
   .nav {
-    gap: 1.1rem;
+    flex-wrap: wrap;
+    gap: 0 1.1rem;
   }
 
   .nav a {
