@@ -11,7 +11,7 @@ Updated 24 Oct 2026. Every item below renders as a lime **Placeholder** stamp or
 | AgentOps features and stack | Source in `Darshna1308/AgentOps`: React dashboard, Express API with JWT and bcryptjs, FastAPI service calling Groq, MongoDB, Docker Compose, calculator and text-analyzer tools, rule-based scoring, feedback | Not run. "Implemented" means present in the code. |
 | IntelliFlow features and status | Source in `Darshna1308/IntelliFlow`: role dashboards, JWT and bcryptjs, Multer uploads, comments, assignments, audit log, deadline indicators. Its README says "Under Development". | Not run. Whether the database is Atlas comes from you; the code just reads `MONGO_URI`. |
 | Echo | Source in `Darshna1308/Echo`: React and Three.js front end, Express and MongoDB back end, accounts, archive and search | Now labelled "Prototype" (it has code, so it's no longer a "Concept"). Please confirm. |
-| NEXUS DELTA | `Darshna1308/nexus-delta-dsa` README: Team DSA, Build For Bharat 2.0, Streamlit and scikit-learn | The README lists three team members, so this is presented as **team** work. "Round 2" comes from you. |
+| NEXUS DELTA | `Darshna1308/nexus-delta-dsa` README: Team DSA (Anwesha Kar, Darshna Parihar, Saamyaraj Baidya), Build For Bharat 2.0, Streamlit and scikit-learn | Kept as **team** work, as you confirmed. "Round 2" comes from you. The commit history doesn't show who built which part, so your contribution isn't stated. |
 
 ## A. Assets you must supply
 
@@ -36,21 +36,36 @@ I matched each screenshot to its repository's source (for example, "Site Control
 
 Optional, any time: an IntelliFlow dashboard screen behind login (the current image shows only the entrance), and a phone capture of any project.
 
-## B. Facts you must confirm
+## B. Remaining content: essential before launch
 
-| Item | Where |
-| --- | --- |
-| Your About introduction, in your own words (2–3 short paragraphs) | `site.profile` |
-| NEXUS DELTA: you confirmed all projects are solo, but its README lists Team DSA with three members. Which is correct for the site? | `labNotes`, `community` |
-| NexaSoul: what you ran or organised, and when | `community[0].detail` |
-| NEXUS DELTA: your own part in the team build, and the hackathon date | `community[1].detail`, `labNotes` |
-| AGNIPARIKSHA: repository link (none found on your GitHub), dataset, model, what it can show | `labNotes` |
-| AgentOps status ("In progress"?) and planned features | `projects.js` |
-| IntelliFlow planned features | `projects.js` |
-| Echo status ("Prototype"?) | `labNotes` |
-| Nidhi Builders case study: the owner's situation, your design decisions, challenges, any outcome the owner can confirm, what you'd improve next | `caseStudy` in `projects.js` |
+These show as placeholders or "to confirm" on the public page and can't be left out without misleading or confusing visitors.
 
-## C. Optional improvements
+| # | Item | Where it shows | Where to edit |
+| --- | --- | --- | --- |
+| 1 | Your About introduction, in your own words (2–3 short paragraphs) | Profile | `site.profile` |
+| 2 | Résumé PDF | Contact | `public/Darshna-Parihar-Resume.pdf`, then `site.links.resume` |
+| 3 | Confirm AgentOps status: "In progress"? | Feature 02 | `projects.js` (`statusConfirmed`) |
+| 4 | Confirm Echo status: "Prototype"? | Lab notes | `labNotes` |
+| 5 | AGNIPARIKSHA: confirm "Prototype" and say what exists (repo link, data, model), or remove it from the site | Lab notes | `labNotes` |
+| 6 | NEXUS DELTA: your own contribution within Team DSA, and the hackathon date. The repo confirms the team and Build For Bharat 2.0 but not who built what. | Lab notes, Community | `labNotes`, `community[1]` |
+
+## C. Remaining content: can be added later
+
+If these are still missing at launch, the right move is to hide the empty slot instead of showing a placeholder (a small code change, made only on request).
+
+| # | Item | Where it shows |
+| --- | --- | --- |
+| 7 | Nidhi Builders phone screenshot (projects section, 390px wide) | Feature 01 and case study, phone frame |
+| 8 | Nidhi case study: the owner's situation before the site | Case study, Problem |
+| 9 | Nidhi case study: your design decisions and how you worked with the owner | Case study, Contribution |
+| 10 | Nidhi case study: one or two real challenges and how you solved them | Case study, Challenges |
+| 11 | Nidhi case study: any outcome the owner can confirm (no invented metrics) | Case study, Results |
+| 12 | Nidhi case study: what you'd improve next | Case study, What's next |
+| 13 | AgentOps: planned features | Feature 02 |
+| 14 | IntelliFlow: planned features | Feature 03 |
+| 15 | NexaSoul: what you ran or organised, and when | Community |
+
+## D. Optional improvements
 
 - **Nidhi Builders site:** its page title is `client` (the Vite default). A real title such as "Nidhi Builders, Jodhpur" would help search results and link previews. Wiring up the contact form would also let you list it as a working feature.
 - **Profile heading:** "Learning by building." is placeholder editorial copy. Change it if it doesn't sound like you.
