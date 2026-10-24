@@ -90,8 +90,10 @@
 
 .colophon p {
   grid-column: 3 / span 6;
+  max-width: 60ch;
   margin: 0 0 0.5rem;
-  opacity: 0.8;
+  line-height: 1.65;
+  color: rgba(243, 239, 230, 0.82);
 }
 
 .colophon .copy {

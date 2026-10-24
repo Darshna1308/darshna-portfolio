@@ -201,6 +201,23 @@
   grid-row: 2;
 }
 
+/* Mid widths: give the text column five columns so the summary keeps a readable measure. */
+@media (max-width: 80rem) {
+  .left .text,
+  .left .note {
+    grid-column: 8 / span 5;
+  }
+
+  .right .text,
+  .right .note {
+    grid-column: 1 / span 5;
+  }
+
+  .left .diagram {
+    grid-column: 1 / span 7;
+  }
+}
+
 @media (max-width: 56rem) {
   .left .media,
   .left .text,

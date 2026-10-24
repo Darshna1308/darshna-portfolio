@@ -46,7 +46,7 @@
 
 .sub {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: var(--step--1);
   color: var(--ink-soft);
 }
 

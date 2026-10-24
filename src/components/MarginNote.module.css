@@ -70,3 +70,10 @@
   font-size: 1.05em;
   color: var(--cobalt);
 }
+
+@media (max-width: 40rem) {
+  .note {
+    transform: none;
+    max-width: none;
+  }
+}

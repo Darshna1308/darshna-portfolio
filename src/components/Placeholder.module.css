@@ -63,7 +63,7 @@
 .textTag {
   font-family: var(--font-mono);
   font-style: normal;
-  font-size: 0.7em;
+  font-size: 0.75em;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ink);

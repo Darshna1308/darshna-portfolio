@@ -231,10 +231,13 @@
   }
 }
 
-@media (max-width: 40rem) {
+@media (max-width: 56rem) {
   .mastheadEnd {
     display: none;
   }
+}
+
+@media (max-width: 40rem) {
 
   .note,
   .coverLine,
