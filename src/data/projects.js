@@ -131,7 +131,7 @@ export const projects = [
     number: '03',
     title: 'IntelliFlow',
     kicker: 'Workflow & approvals app',
-    status: 'inProgress',
+    status: 'completed',
     statusConfirmed: true,
     summary:
       'A workflow and approval platform for document-driven requests, with separate dashboards for requesters, reviewers and admins, document uploads and an audit trail.',
@@ -143,7 +143,7 @@ export const projects = [
       'Reviewer assignment and comments',
       'Audit log and deadline indicators',
     ],
-    planned: [ph('Features still planned', { optional: true })],
+    planned: [],
     role: 'Solo project',
     repo: 'https://github.com/Darshna1308/IntelliFlow',
     media: [

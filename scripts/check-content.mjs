@@ -1,7 +1,7 @@
 // Lists every placeholder and unconfirmed status left in the site content.
 // Essential items (shown on the site as a "Placeholder" stamp or "to confirm" note) make
 // `npm run check:content` exit with 1. Optional items are hidden on the site and only listed.
-import { projects, labNotes } from '../src/data/projects.js'
+import { projects, labNotes, STATUS } from '../src/data/projects.js'
 import { site, community, services } from '../src/data/site.js'
 
 const essential = []
@@ -13,6 +13,7 @@ function walk(value, path) {
       ;(value.optional ? optional : essential).push(`${path}: ${value.label}`)
       return
     }
+    if ('status' in value && !(value.status in STATUS)) essential.push(`${path}.status: "${value.status}" has no label`)
     if (value.statusConfirmed === false) essential.push(`${path}.status: "${value.status}" not yet confirmed`)
     if (value.confirmed === false) essential.push(`${path}: drafted wording not yet confirmed`)
     for (const [key, child] of Object.entries(value)) {
