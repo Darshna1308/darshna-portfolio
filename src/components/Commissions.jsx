@@ -4,10 +4,10 @@ import MarginNote from './MarginNote.jsx'
 import styles from './Commissions.module.css'
 
 const PROCESS = [
-  ['Talk', 'A short call or message thread to understand what you need and whether I am the right fit.'],
-  ['Scope', 'A written plan with what is included, what is not, and a realistic timeline.'],
-  ['Build', 'Work in small steps with a live preview link you can check at any time.'],
-  ['Hand over', 'Deployment, a simple guide to updating content, and the source code.'],
+  ['Talk', 'We discuss what you need and whether it is a good fit for my skills.'],
+  ['Scope', 'A written scope of what is included and what is not, agreed before work starts.'],
+  ['Build', 'I work in small steps and share preview links as the project progresses.'],
+  ['Hand over', 'Deployment and handover of the source code, as agreed in the scope.'],
 ]
 
 export default function Commissions() {
@@ -20,8 +20,8 @@ export default function Commissions() {
           </h2>
           <div className={styles.intro} data-reveal="">
             <p>
-              I take on freelance work alongside my degree. I&rsquo;m best suited to small, well-defined projects where a
-              careful, responsive builder matters more than a large agency.
+              I take on small, well-defined freelance projects alongside my degree, mainly websites and React front ends
+              built with the tools I use in my own projects.
             </p>
             <MarginNote tone="lime">Straight answers on what I can and can&rsquo;t take on.</MarginNote>
           </div>

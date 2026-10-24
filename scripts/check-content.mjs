@@ -12,6 +12,7 @@ function walk(value, path) {
       return
     }
     if (value.statusConfirmed === false) found.push(`${path}.status: "${value.status}" not yet confirmed`)
+    if (value.confirmed === false) found.push(`${path}: drafted wording not yet confirmed`)
     for (const [key, child] of Object.entries(value)) {
       walk(child, Array.isArray(value) ? `${path}[${key}]` : `${path}.${key}`)
     }

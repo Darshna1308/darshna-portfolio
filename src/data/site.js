@@ -11,8 +11,8 @@ export const site = {
     degree: 'B.E. Computer Science',
     school: 'Chandigarh University',
     years: '2024–2028',
-    // Shown only when Darshna confirms she wants it on the site.
-    cgpa: { value: '7.92 / 10', show: true },
+    // Latest CGPA Darshna stated. Set `show: false` to hide it; `confirmed` flags it in check:content.
+    cgpa: { value: '7.92 / 10', show: true, confirmed: false },
   },
 
   links: {
@@ -23,7 +23,7 @@ export const site = {
     resume: ph('Résumé PDF'),
   },
 
-  portrait: ph('Portrait photograph of Darshna'),
+  portrait: ph('Real portrait of Darshna, vertical 4:5, at least 1200 × 1500px'),
 
   // First-person profile essay. Paragraphs marked as placeholders still need Darshna's own words.
   profile: [
@@ -48,20 +48,24 @@ export const community = [
   },
 ]
 
+// Drafted from Darshna's real stack; `confirmed: false` until she approves the wording.
 export const services = [
   {
     title: 'Websites for small businesses',
-    body: 'A fast, responsive site that presents what you offer and makes it easy to contact you, including WhatsApp enquiry buttons.',
-    proof: 'As built for Nidhi Builders',
+    body: 'A responsive website that presents what your business offers and gives visitors a clear way to contact you, such as a WhatsApp enquiry link.',
+    proof: 'Example: Nidhi Builders',
+    confirmed: false,
   },
   {
     title: 'React front ends',
-    body: 'Turning a design or a rough idea into clean, accessible React components that work on phones as well as desktops.',
-    proof: 'React, Vite, CSS Modules',
+    body: 'Turning a design or a rough idea into React components that work on phones and desktops.',
+    proof: 'React, Vite, CSS',
+    confirmed: false,
   },
   {
     title: 'Small full-stack MVPs',
-    body: 'A first working version with sign-up, login and a database, so you can test an idea with real users.',
+    body: 'A small first version of an app with sign-up, login and a database, to try out an idea.',
     proof: 'Express, MongoDB, JWT auth',
+    confirmed: false,
   },
 ]

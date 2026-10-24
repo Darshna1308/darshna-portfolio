@@ -26,8 +26,8 @@ export const projects = [
     role: ph('Solo or team, and what Darshna built'),
     liveUrl: ph('Live site URL'),
     media: [
-      { kind: 'desktop', alt: ph('Homepage screenshot, desktop') },
-      { kind: 'mobile', alt: ph('Property page screenshot, mobile') },
+      { kind: 'desktop', alt: ph('Nidhi Builders homepage, desktop browser at 1440px, top of page (16:10)') },
+      { kind: 'mobile', alt: ph('Nidhi Builders property section on a phone, 390px wide (9:19)') },
     ],
     layout: 'lead',
     // A left-to-right chain; `link` is the arrow from the previous node (→ ← ↔).
@@ -70,7 +70,7 @@ export const projects = [
     working: [ph('Features that work today')],
     planned: [ph('Features still planned')],
     role: ph('Solo or team, and what Darshna built'),
-    media: [{ kind: 'desktop', alt: ph('Interface or terminal screenshot') }],
+    media: [{ kind: 'desktop', alt: ph('AgentOps running: its interface, or real API/terminal output if it has no UI (16:10)') }],
     layout: 'right',
     architecture: {
       caption: 'Drawn from the stated stack; to be checked against the code.',
@@ -95,7 +95,7 @@ export const projects = [
     working: ['Sign-up and login with hashed passwords', ph('Core app features that work today')],
     planned: [ph('Features still planned')],
     role: ph('Solo or team, and what Darshna built'),
-    media: [{ kind: 'desktop', alt: ph('Dashboard or main screen screenshot') }],
+    media: [{ kind: 'desktop', alt: ph('IntelliFlow main screen after login, desktop at 1440px (16:10)') }],
     layout: 'left',
     architecture: {
       caption: 'Drawn from the stated stack; to be checked against the code.',
