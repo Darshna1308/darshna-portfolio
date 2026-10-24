@@ -22,14 +22,41 @@
   text-decoration: none;
 }
 
-.name {
+.mark {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  white-space: nowrap;
+}
+
+.initials {
   font-family: var(--font-display);
-  font-style: italic;
   font-size: var(--step-1);
+  font-weight: 500;
   line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.dot {
+  color: var(--cobalt);
+}
+
+.slash,
+.word {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.slash {
+  color: var(--ink-soft);
 }
 
 .issue {
+  margin-left: 0.5rem;
+  padding-left: 1.25rem;
+  border-left: 1px solid var(--rule);
   font-family: var(--font-mono);
   font-size: var(--step--1);
   color: var(--ink-soft);

@@ -14,8 +14,14 @@ export default function SiteHeader() {
   return (
     <header className={styles.header}>
       <div className={`wrap ${styles.inner}`}>
-        <Link to="/" className={styles.brand}>
-          <span className={styles.name}>{site.name}</span>
+        <Link to="/" className={styles.brand} aria-label={`${site.name}, portfolio home`}>
+          <span className={styles.mark} aria-hidden="true">
+            <span className={styles.initials}>
+              DP<span className={styles.dot}>.</span>
+            </span>
+            <span className={styles.slash}>/</span>
+            <span className={styles.word}>Portfolio</span>
+          </span>
           <span className={styles.issue} aria-hidden="true">
             Working Notes · {site.issue}
           </span>
