@@ -1,9 +1,10 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
-// Scrolls to the hash target after navigation, or to the top on a new page.
+// Scrolls to the hash target after every navigation (including a repeat click on
+// the same link), or to the top on a new page.
 export default function ScrollManager() {
-  const { pathname, hash } = useLocation()
+  const { pathname, hash, key } = useLocation()
 
   useEffect(() => {
     if (hash) {
@@ -14,7 +15,7 @@ export default function ScrollManager() {
       }
     }
     window.scrollTo(0, 0)
-  }, [pathname, hash])
+  }, [pathname, hash, key])
 
   return null
 }

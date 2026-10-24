@@ -103,7 +103,7 @@ export default function Cover() {
           >
             <span className={styles.doorEyebrow}>For recruiters</span>
             <span className={styles.doorText}>Hiring an intern?</span>
-            <span className={styles.doorCta}>See the work &amp; résumé →</span>
+            <span className={styles.doorCta}>See the selected work →</span>
           </a>
         </nav>
       </div>
