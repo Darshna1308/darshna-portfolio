@@ -1,0 +1,264 @@
+.cover {
+  position: relative;
+  overflow-x: clip;
+  padding-block: clamp(1.5rem, 4vw, 3rem) clamp(3rem, 6vw, 5rem);
+  border-bottom: 1px solid var(--ink);
+}
+
+.inner {
+  display: grid;
+}
+
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--ink);
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.title {
+  margin-top: clamp(1rem, 3vw, 2.5rem);
+  font-size: var(--step-5);
+  font-weight: 300;
+  line-height: 0.82;
+  letter-spacing: -0.045em;
+}
+
+.line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.08em;
+}
+
+.lineInner {
+  display: block;
+}
+
+.lineTwo {
+  text-align: right;
+  padding-right: 0.06em;
+  margin-top: -0.06em;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--cobalt);
+}
+
+.rule {
+  height: 6px;
+  margin-top: clamp(0.75rem, 2vw, 1.5rem);
+  background: var(--ink);
+  transform-origin: left;
+}
+
+.body {
+  margin-top: clamp(1.5rem, 4vw, 3rem);
+  row-gap: 2rem;
+  align-items: start;
+}
+
+.note {
+  grid-column: 1 / span 3;
+  margin-top: 0.4rem;
+}
+
+.coverLine {
+  grid-column: 5 / span 5;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--step-2);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+}
+
+.facts {
+  grid-column: 10 / span 3;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+}
+
+.facts dt {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+}
+
+.facts dd {
+  margin: 0;
+}
+
+.doors {
+  margin-top: clamp(2.5rem, 6vw, 5rem);
+  row-gap: var(--gutter);
+}
+
+.door {
+  grid-column: span 6;
+  display: grid;
+  gap: 0.4rem;
+  padding: 1.25rem 0 1.5rem;
+  border-top: 3px solid var(--ink);
+  text-decoration: none;
+  transition: color 250ms ease, padding 350ms var(--ease-out);
+}
+
+.doorAlt {
+  margin-top: clamp(0rem, 4vw, 3.5rem);
+}
+
+.door:hover {
+  color: var(--cobalt);
+  padding-left: 0.75rem;
+}
+
+.doorEyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+}
+
+.doorText {
+  font-family: var(--font-display);
+  font-size: var(--step-3);
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+
+.doorCta {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--step-1);
+}
+
+.skip {
+  position: fixed;
+  bottom: 1.25rem;
+  right: var(--gutter);
+  z-index: 5;
+  padding: 0.5rem 0.9rem;
+  border: 1.5px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.skip:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* ---- Cover reveal (only while playing; final state is the default) ---- */
+.playing .a1 {
+  animation: fade 500ms var(--ease-out) both;
+}
+
+.playing .a2 {
+  animation: rise 900ms var(--ease-out) 150ms both;
+}
+
+.playing .a3 {
+  animation: rise 900ms var(--ease-out) 380ms both;
+}
+
+.playing .a4 {
+  animation: wipe 700ms var(--ease-out) 900ms both;
+}
+
+.playing .a5 {
+  animation: fadeUp 600ms var(--ease-out) 1250ms both;
+}
+
+.playing .a6 {
+  animation: fadeUp 600ms var(--ease-out) 1400ms both;
+}
+
+.playing .a7 {
+  animation: fadeUp 600ms var(--ease-out) 1600ms both;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(105%);
+  }
+}
+
+@keyframes wipe {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+}
+
+@media (max-width: 64rem) {
+  .note {
+    grid-column: 1 / span 4;
+  }
+
+  .coverLine {
+    grid-column: 5 / span 8;
+  }
+
+  .facts {
+    grid-column: 5 / span 8;
+    grid-template-columns: repeat(3, auto);
+    justify-content: start;
+    column-gap: 2rem;
+  }
+}
+
+@media (max-width: 56rem) {
+  .mastheadEnd {
+    display: none;
+  }
+}
+
+@media (max-width: 40rem) {
+
+  .note,
+  .coverLine,
+  .facts {
+    grid-column: 1 / -1;
+  }
+
+  .note {
+    order: 2;
+  }
+
+  .facts {
+    order: 3;
+    grid-template-columns: 1fr;
+  }
+
+  .door {
+    grid-column: 1 / -1;
+  }
+
+  .doorAlt {
+    margin-top: 0;
+  }
+}

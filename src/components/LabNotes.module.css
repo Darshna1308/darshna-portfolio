@@ -1,0 +1,116 @@
+.section {
+  padding-block: var(--space-section) calc(var(--space-section) * 0.5);
+  border-top: 1px solid var(--ink);
+}
+
+.head {
+  align-items: end;
+  row-gap: 1rem;
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+}
+
+.heading {
+  grid-column: 1 / span 7;
+  font-size: var(--step-4);
+  font-weight: 300;
+}
+
+.heading em {
+  color: var(--cobalt);
+}
+
+.intro {
+  grid-column: 9 / span 4;
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  row-gap: 3rem;
+}
+
+.item {
+  grid-column: span 6;
+  display: grid;
+  align-content: start;
+  gap: 0.85rem;
+  padding-top: 1rem;
+  border-top: 3px solid var(--ink);
+}
+
+/* Staggered columns keep the row from reading as a card grid. */
+.item:nth-child(2) {
+  margin-top: 4rem;
+}
+
+.index {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  color: var(--cobalt);
+}
+
+.title {
+  font-size: var(--step-2);
+  letter-spacing: -0.01em;
+}
+
+.summary {
+  margin: 0;
+}
+
+.exists {
+  margin: 0;
+}
+
+.existsLabel {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+}
+
+.credits {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0;
+}
+
+.credits dt {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+}
+
+.credits dd {
+  margin: 0.15rem 0 0;
+}
+
+.repo {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+}
+
+.note {
+  margin: clamp(2rem, 5vw, 4rem) 0 0 auto;
+}
+
+@media (max-width: 56rem) {
+  .heading,
+  .intro,
+  .item {
+    grid-column: 1 / -1;
+  }
+
+  .item:nth-child(n) {
+    margin-top: 0;
+  }
+}

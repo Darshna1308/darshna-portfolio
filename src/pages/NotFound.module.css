@@ -1,0 +1,36 @@
+.page {
+  min-height: 70vh;
+  padding-block: clamp(3rem, 10vw, 8rem);
+}
+
+.folio {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cobalt);
+}
+
+.title {
+  font-size: var(--step-5);
+  font-weight: 300;
+  line-height: 0.85;
+  letter-spacing: -0.05em;
+}
+
+.title em {
+  color: var(--cobalt);
+}
+
+.text {
+  max-width: 36rem;
+  margin: 2rem 0;
+  font-size: var(--step-1);
+}
+
+.link {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}

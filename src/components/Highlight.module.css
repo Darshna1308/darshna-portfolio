@@ -1,0 +1,19 @@
+.mark {
+  color: inherit;
+  background: linear-gradient(transparent 12%, var(--lime) 12%, var(--lime) 88%, transparent 88%)
+    no-repeat 0 0 / 0% 100%;
+  padding-inline: 0.08em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  transition: background-size 900ms var(--ease-out) 200ms;
+}
+
+.mark:global(.is-in) {
+  background-size: 100% 100%;
+}
+
+@media (scripting: none) {
+  .mark {
+    background-size: 100% 100%;
+  }
+}

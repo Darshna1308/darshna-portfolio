@@ -1,0 +1,60 @@
+import { labNotes } from '../data/projects.js'
+import Field, { MaybeLink } from './Field.jsx'
+import MarginNote, { StatusNote } from './MarginNote.jsx'
+import ProjectMedia from './ProjectMedia.jsx'
+import styles from './LabNotes.module.css'
+
+export default function LabNotes() {
+  return (
+    <section id="lab-notes" className={`wrap ${styles.section}`} aria-labelledby="lab-title">
+      <div className={`grid ${styles.head}`}>
+        <h2 id="lab-title" className={styles.heading} data-reveal="">
+          Lab <em>notes</em>
+        </h2>
+        <p className={styles.intro} data-reveal="">
+          Shorter pieces: concepts, prototypes and hackathon work. Each one is labelled for what it is today, not what it
+          might become.
+        </p>
+      </div>
+
+      <ol className={`grid ${styles.list}`}>
+        {labNotes.map((note, i) => (
+          <li key={note.slug} id={note.slug} className={styles.item} data-reveal="">
+            <span className={styles.index} aria-hidden="true">
+              04.{i + 1}
+            </span>
+            <h3 className={styles.title}>{note.title}</h3>
+            <StatusNote status={note.status} confirmed={note.statusConfirmed} />
+            <p className={styles.summary}>{note.summary}</p>
+            {note.media && <ProjectMedia item={note.media} sizes="(min-width: 56rem) 30vw, 100vw" />}
+            <p className={styles.exists}>
+              <span className={styles.existsLabel}>What exists today</span>
+              <Field value={note.exists} />
+            </p>
+            {note.credits && (
+              <dl className={styles.credits}>
+                {note.credits.map(([label, value]) => (
+                  <div key={label}>
+                    <dt>{label}</dt>
+                    <dd>{value}</dd>
+                  </div>
+                ))}
+              </dl>
+            )}
+            {note.repo && (
+              <p className={styles.repo}>
+                <MaybeLink href={note.repo}>
+                  Source on GitHub<span className="visually-hidden">: {note.title}</span>
+                </MaybeLink>
+              </p>
+            )}
+          </li>
+        ))}
+      </ol>
+
+      <MarginNote className={styles.note}>
+        Experiments are where I learn fastest. They stay here, marked honestly, until they earn a full feature.
+      </MarginNote>
+    </section>
+  )
+}
